@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <!-- Player Setup -->
+    <div class="player-setup">
+      <h2>Player Setup</h2>
+      <label for="player1-name">Player 1 Name: </label>
+      <input type="text" id="player1-name" placeholder="Enter Player 1 Name" />
+      <label for="player2-name">Player 2 Name: </label>
+      <input type="text" id="player2-name" placeholder="Enter Player 2 Name" />
+      
+      <label for="game-mode">Game Mode: </label>
+      <select id="game-mode">
+        <option value="human-vs-human">Human vs Human</option>
+        <option value="human-vs-computer">Human vs Computer</option>
+      </select>
+      <button id="start-game">Start Game</button>
+    </div>
+
+    <div class="choices">
+      <div class="choice" id="rock">
+        <img src="./images/rock.png" />
+      </div>
+      <div class="choice" id="paper">
+        <img src="./images/paper.png" />
+      </div>
+      <div class="choice" id="scissors">
+        <img src="./images/scissors.png" />
+      </div>
+    </div>
+
+    <div class="score-board">
+      <div class="score">
+        <p id="user-score">0</p>
+        <p>You</p>
+      </div>
+      <div class="score">
+        <p id="comp-score">0</p>
+        <p>Comp</p>
+      </div>
+    </div>
+
+    <div class="msg-container">
+      <p id="msg">Please set up players and start the game</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
