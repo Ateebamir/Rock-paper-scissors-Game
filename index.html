@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rock Paper Scissors - Ultra Pro</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="app">
+      <h1>Rock Paper Scissors</h1>
+
+      <!-- Player Setup -->
+      <div class="player-setup card">
+        <h2>Player Setup</h2>
+
+        <div class="row">
+          <label for="player1-name">Player 1 Name</label>
+          <input type="text" id="player1-name" placeholder="Enter Player 1 Name"/>
+        </div>
+
+        <div class="row">
+          <label for="player2-name">Player 2 Name</label>
+          <input type="text" id="player2-name" placeholder="Enter Player 2 Name"/>
+        </div>
+
+        <div class="row">
+          <label for="game-mode">Game Mode</label>
+          <select id="game-mode">
+            <option value="human-vs-human">Human vs Human</option>
+            <option value="human-vs-computer">Human vs Computer</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="rounds">Best of</label>
+          <select id="rounds">
+            <option value="3">3</option>
+            <option value="5" selected>5</option>
+            <option value="7">7</option>
+          </select>
+        </div>
+
+        <div class="row row-inline">
+          <label class="toggle">
+            <input type="checkbox" id="sound-toggle" checked />
+            <span>Sound ON</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="delay-toggle" checked />
+            <span>Computer Think Delay</span>
+          </label>
+        </div>
+
+        <button id="start-game">Start Game</button>
+      </div>
+
+      <!-- Score Board -->
+      <div class="score-board card">
+        <div class="score">
+          <p id="user-score">0</p>
+          <p id="player1-label">Player 1</p>
+        </div>
+        <div class="score">
+          <p id="comp-score">0</p>
+          <p id="player2-label">Player 2</p>
+        </div>
+        <div class="bestof">
+          <span id="bestof-label">Best of 5 • First to 3</span>
+        </div>
+      </div>
+
+      <!-- Choices -->
+      <div class="choices">
+        <div class="choice" id="rock" data-choice="rock" title="Rock">
+          <img src="https://img.icons8.com/emoji/96/rock-emoji.png" alt="Rock"/>
+          <span>Rock</span>
+        </div>
+        <div class="choice" id="paper" data-choice="paper" title="Paper">
+          <img src="https://img.icons8.com/emoji/96/page-facing-up.png" alt="Paper"/>
+          <span>Paper</span>
+        </div>
+        <div class="choice" id="scissors" data-choice="scissors" title="Scissors">
+          <!-- Your local image (we created earlier) -->
+          <img src="./images/scissors.png" alt="Scissors"/>
+          <span>Scissors</span>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="msg-container card">
+        <p id="msg">Please set up players and start the game</p>
+      </div>
+
+      <!-- History -->
+      <div class="history card">
+        <div class="history-header">
+          <h3>Recent Rounds</h3>
+          <button id="clear-history" class="ghost">Clear</button>
+        </div>
+        <ul id="history-list"></ul>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button id="reset-round" class="secondary">↻ Reset Scores</button>
+        <button id="new-match" class="primary">🆕 New Match</button>
+      </div>
+    </div>
+
+    <!-- Confetti (tiny, safe CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
